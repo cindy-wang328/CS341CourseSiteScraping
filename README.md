@@ -1,5 +1,5 @@
-# CS341CourseSiteScraping
-put the cs341 assignments and lectures into google calendar
+# CS341 Scraping
+put the cs341 assignments and lectures into google calendar (Why does every course use a diff site?????)
 
 Authorize google calendar api:
 - Go to https://developers.google.com/calendar/quickstart/python, follow their Step 1 and 2
