@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from __future__ import print_function
 import datetime
 import pickle
@@ -109,18 +110,7 @@ def main():
     for tr in a.find_all("tr"):
         tds = tr.find_all("td")
         a341.append([x.text for x in tds])
-    # a341 = [['1\n', 'Wednesday, January 20', 'Wednesday, January 27', 'CrowdMark', '', ''],
-    #         ['2\n', 'Wednesday, January 27', 'Wednesday, February 3', 'CrowdMark', '', ''],
-    #         ['3\n', 'Wednesday, February 3', 'Wednesday, February 10', 'CrowdMark', '', ' '],
-    #         ['4\n', 'Wednesday, February 10', 'Wednesday, February 24', 'CrowdMark', '', ''],
-    #         ['Programming 1\n', 'Wednesday, February 10', 'Wednesday, March 3', 'Marmoset', ' ', ' '],
-    #         ['5\n', 'Wednesday, February 24', 'Wednesday, March 3', 'CrowdMark', '', ''],
-    #         ['6\n', 'Wednesday, March 3', 'Wednesday, March 10', 'CrowdMark', '', ''],
-    #         ['7\n', 'Wednesday, March 10', 'Wednesday, March 17', 'CrowdMark', '', ' '],
-    #         ['Programming 2\n', 'Wednesday, March 10', 'Wednesday, March 24', 'Marmoset', ' ', ' '],
-    #         ['8\n', 'Wednesday, March 17', 'Wednesday, March 24', 'CrowdMark', '', ' '],
-    #         ['9\n', 'Wednesday, March 24', 'Wednesday, March 31', 'CrowdMark', '', ''],
-    #         ['10\n', 'Wednesday, March 31', 'Wednesday, April 7', 'CrowdMark', '', '']]
+
     for l in a341:
         if len(l) > 0:
             dt = (datetime.strptime(l[2] + " 2021", "%A, %B %d %Y" ).strftime("%Y-%m-%d"))
