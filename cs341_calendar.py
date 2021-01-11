@@ -14,8 +14,8 @@ import random
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
-REMINDER_MINUTES = 420
-color = random.randint(1, 11)
+REMINDER_MINUTES = 420 # Number of minutes BEFORE the event (420 means 5pm the day before the due date) since google doesn't let you put reminders after the fullday event already started
+
 
 def main():
     """Shows basic usage of the Google Calendar API.
@@ -55,7 +55,7 @@ def main():
     # for event in events:
     #     start = event['start'].get('dateTime', event['start'].get('date'))
     #     print(start, event['summary'])
-
+    color = random.randint(1, 11)
     soup = BeautifulSoup(requests.get("https://student.cs.uwaterloo.ca/~cs341/").text, "html.parser")
 
     l = (soup.find(id="Lectures"))
